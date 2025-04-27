@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayurvedic Medicine Recommender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <form id="medicineForm">
+      <div class="inputs">
+        <div class="field">
+          <label for="age">AGE</label>
+          <input type="number" id="age" name="age" min="0" required placeholder="Enter the patients current Age" />
+        </div>
+        <div class="field">
+          <label for="gender">GENDER</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected hidden>Choose…</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="severity">SEVERITY</label>
+          <select id="severity" name="severity" required>
+            <option value="" disabled selected hidden>Choose…</option>
+            <option value="LOW">LOW</option>
+            <option value="NORMAL">NORMAL</option>
+            <option value="HIGH">HIGH</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>SELECT SYMPTOMS</legend>
+        <div class="symptom-group">
+          <label><input type="checkbox" name="symptom" value="acidity" id="acidity" /> Acidity</label>
+        <label><input type="checkbox" name="symptom" value="indigestion" id="indigestion" /> Indigestion</label>
+        <label><input type="checkbox" name="symptom" value="headache" id="headache" /> Headache</label>
+        <label><input type="checkbox" name="symptom" value="blurred_and_distorted_vision" id="blurred_and_distorted_vision" /> Blurred Vision</label>
+        <label><input type="checkbox" name="symptom" value="excessive_hunger" id="excessive_hunger" /> Excessive Hunger</label>
+        <label><input type="checkbox" name="symptom" value="muscle_weakness" id="muscle_weakness" /> Muscle Weakness</label>
+        <label><input type="checkbox" name="symptom" value="stiff_neck" id="stiff_neck" /> Stiff Neck</label>
+        <label><input type="checkbox" name="symptom" value="swelling_joints" id="swelling_joints" /> Swelling Joints</label>
+        <label><input type="checkbox" name="symptom" value="movement_stiffness" id="movement_stiffness" /> Movement Stiffness</label>
+        <label><input type="checkbox" name="symptom" value="depression" id="depression" /> Depression</label>
+        <label><input type="checkbox" name="symptom" value="irritability" id="irritability" /> Irritability</label>
+        <label><input type="checkbox" name="symptom" value="visual_disturbances" id="visual_disturbances" /> Visual Disturbances</label>
+        <label><input type="checkbox" name="symptom" value="painful_walking" id="painful_walking" /> Painful Walking</label>
+        <label><input type="checkbox" name="symptom" value="abdominal_pain" id="abdominal_pain" /> Abdominal Pain</label>
+        <label><input type="checkbox" name="symptom" value="nausea" id="nausea" /> Nausea</label>
+        <label><input type="checkbox" name="symptom" value="vomiting" id="vomiting" /> Vomiting</label>
+        <label><input type="checkbox" name="symptom" value="blood_in_mucus" id="blood_in_mucus" /> Blood in Mucus</label>
+        <label><input type="checkbox" name="symptom" value="fatigue" id="fatigue" /> Fatigue</label>
+        <label><input type="checkbox" name="symptom" value="fever" id="fever" /> Fever</label>
+        <label><input type="checkbox" name="symptom" value="dehydration" id="dehydration" /> Dehydration</label>
+        <label><input type="checkbox" name="symptom" value="loss_of_appetite" id="loss_of_appetite" /> Loss of Appetite</label>
+        <label><input type="checkbox" name="symptom" value="cramping" id="cramping" /> Cramping</label>
+        <label><input type="checkbox" name="symptom" value="blood_in_stool" id="blood_in_stool" /> Blood in Stool</label>
+        <label><input type="checkbox" name="symptom" value="gnawing" id="gnawing" /> Gnawing Pain</label>
+        <label><input type="checkbox" name="symptom" value="upper_abdomain_pain" id="upper_abdomain_pain" /> Upper Abdominal Pain</label>
+        <label><input type="checkbox" name="symptom" value="fullness_feeling" id="fullness_feeling" /> Fullness Feeling</label>
+        <label><input type="checkbox" name="symptom" value="hiccups" id="hiccups" /> Hiccups</label>
+        <label><input type="checkbox" name="symptom" value="abdominal_bloating" id="abdominal_bloating" /> Abdominal Bloating</label>
+        <label><input type="checkbox" name="symptom" value="heartburn" id="heartburn" /> Heartburn</label>
+        <label><input type="checkbox" name="symptom" value="belching" id="belching" /> Belching</label>
+        <label><input type="checkbox" name="symptom" value="burning_ache" id="burning_ache" /> Burning Ache</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Get Recommendation</button>
+    </form>
+    <p id="output"></p>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
